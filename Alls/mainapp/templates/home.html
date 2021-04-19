@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EvE-FoT</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'mainapp/css/main.css' %}">
+    <link rel="shortcut icon" type="image/ico" href="{% static 'mainapp/images/ico.ico' %}"/>
+</head>
+<body>
+<style>
+    .login {
+        border: none;
+        font-weight: bold;
+        background: #ffc107;
+        border-radius: 20px 0 20px 0;
+        display: inline-block;
+        color: #000000;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 10px;
+        text-decoration: none;
+        margin-left: 25px;
+    }
+    .login:hover {
+        box-shadow: 0 1px 15px rgba(255, 193, 7, 0.5);
+        text-shadow: 0 2px 20px white;
+        text-decoration: none;
+        color: black;
+    }
+
+    .download {
+        border: none;
+        font-weight: bold;
+        background: #ffc107;
+        border-radius: 20px 0 20px 0;
+        display: inline-block;
+        color: #000000;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    .download:hover {
+        box-shadow: 0 1px 15px rgba(255, 193, 7, 0.5);
+        text-shadow: 0 2px 20px white;
+        text-decoration: none;
+        color: black;
+    }
+</style>
+    <header>
+        <img src="{% static 'mainapp/images/logo1.png' %}" alt="Лого">
+        <span class="logo">Federation of Time</span>
+        <ul>
+            <a href="{% url 'home' %}"><li>Главная</li></a>
+            <a href="{% url 'alliance' %}"><li>Альянс</li></a>
+            <a href="{% url 'control' %}"><li>Управление</li></a>
+            <a href="{% url 'promotions' %}"><li>Акции</li></a>
+            <a href="{% url 'rent' %}"><li>Аренда</li></a>
+            <a href="{% url 'inst' %}"><li>Инструменты</li></a>
+            <a href="{% url 'gid' %}"><li>Гайды</li></a>
+            <a href="{% url 'contact' %}"><li>Контакты</li></a>
+            <a href="https://zkillboard.com/corporation/98660988/"><li><i class="fas fa-meteor"></i> Zkillboard</li></a>
+            <a href="http://62.109.0.32/"><li><i class="fas fa-user-secret"></i> SEAT</li></a>
+            <a href="https://www.youtube.com/channel/UCfspMBqcqaK2DmftPfN4vDw"><li><font color="red"><i class="fab fa-youtube"></i></font> YouTube</li></a>
+            <a class="login" href="">Войти</a>
+            <a class="download" href="{% url 'download' %}">Загрузки</a>
+        </ul>
+    </header>
+    <main>
+    </main>
+</body>
+</html>
+
