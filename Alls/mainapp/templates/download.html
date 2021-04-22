@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Federation of Time | fot-eve.ru</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'mainapp/css/verstka.css' %}">
+<link rel="stylesheet" href="{% static 'mainapp/css/mains.css' %}">
+<link rel="shortcut icon" type="image/ico" href="{% static 'mainapp/images/ico.ico' %}"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<script src="{% static 'mainapp/js/app.js' %}" defer></script>
+<script src="{% static 'mainapp/js/common.js' %}"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    domReady(function () {
+        stFiles.init({
+});
+new WOW.WOW().init();
+    });
+</script>
+<div class="shapka">
+    <nav class="navMain">
+        <div class="navMain__elements">
+            <div class="navMain__logo">
+                <style>
+                    .logotip {
+                        width: 45px;
+                        height: 45px;
+                        margin-top: +27px;
+                    }
+                    .logo {
+                        margin-left: 10px;
+                        font-width: bold;
+                        position: relative;
+                        top: +18px;
+                        color: #fff;
+                        font: 700 18px Geometria;
+                    }
+                    .correctlogin {
+                        width: 42px;
+                        height: 42px;
+                    }
+                    .correctdownload {
+                        width: 42px;
+                        height: 42px;
+                        margin-left: 5px;
+                    }
+                </style>
+                <img class="logotip" src="{% static 'mainapp/images/logo1.png' %}" alt="Лого">
+                <span class="logo">FEDERATION OF TIME</span>
+            </div>
+            <ul class="navMain__links mb-0">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'alliance' %}">Альянс</a></li>
+                <li><a href="{% url 'control' %}">Управление</a></li>
+                <li><a href="{% url 'promotions' %}">Акции</a></li>
+                <li><a href="{% url 'rent' %}">Аренда</a></li>
+                <li><a href="{% url 'gid' %}">Гайды</a></li>
+                <li><a href="{% url 'inst' %}">Инструменты</a></li>
+            </ul>
+            <ul class="navMain__links--sec">
+                <li><a class="navMain__auth" href="{% url 'login' %}"><img class="correctlogin" src="/media/verstka/login.png" alt="login icon png"/><p>Авторизация</p></a></li>
+                <li><a href="{% url 'downloads' %}"><img class="correctdownload" src="/media/verstka/download.png" alt="login icon png"/></a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+    <main>
+        <div class="main__home">
+    <div class="container main__container">
+        <div class="row">
+            <div class="col-12">
+                <header class="main__header wow fadeInLeft">
+                    <h3 class="main__slogan">Построй новый мир в EVE online вместе с FoT</h3>
+                    <h1>
+                        <img style="width: 242px;" src="/media/verstka/bif.png" alt="FoT">
+                    </h1>
+                </header>
+            </div>
+            <div class="col-12 mb-5">
+                <footer class = "casemain__footer d-flex flex-wrap flex-row justify-content-start justify-content-lg-between align-items-center">
+                    <a href = "{% url 'info' %}" role = "button" class = "mr-4 mt-5 g-btn g-btn-default">Присоединиться<img style="width: 26px;" src = "/media/verstka/groups.png" alt = "FoT"/></a>
+                    <section class="mt-5 mr-3 casemain__serverInfo d-flex flex-row">
+                        <header>
+                            <p style="color: white; font-style: normal; font: 900 30px Geometria; text-shadow: black 0 0 4px;">НАС УЖЕ:</p>
+                            <p><output id = "players__online" style="font: 900 30px Geometria; text-shadow: black 0 0 4px; color: silver; font-weight: bold;">104</output></p>
+                        </header>
+                        <footer></footer>
+                    </section>
+                    <section class="mt-5 mb-5 mb-sm-0 casemain__serverInfo d-flex flex-row">
+                        <div style = "position: relative;" id = "play__home">
+                            <img src = "/media/verstka/spinner.png" alt = "FoT" class = "play__spinner"/>
+                            <img src = "/media/verstka/play.png" class = "play__btn" />
+                        </div>
+                        <header>
+                            <hз style="color: white; font: 900 19px Geometria; text-shadow: black 0 0 4px;">Узнай больше</hз><p style="color: white; font: 900 14px Geometria; text-shadow: black 0 0 4px;">Посмотрев промо-ролик</p>
+                        </header>
+                    </section>
+                    <footer></footer>
+                </footer>
+            </div>
+        </div>
+
+        <div class="casemain__gangsta d-md-flex">
+            <img src = "/media/verstka/man.png" alt = "FoT man" />
+        </div>
+    </div>
+</div>
+
+<div class = "window__wrapper d-none" id = "watchVideo">
+    <div class="window__content" style="max-height: 80% !important; max-width: 80% !important;">
+        <button type = "button" class = "window__close">
+            Закрыть        </button>
+        <iframe width = "100%" height = "100%" src = "https://www.youtube.com/embed/GoUlzCTm83I"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+        </iframe>
+    </div>
+</div>
+<div class = "window__wrapper d-none" id = "watchVideoPlay">
+    <div class="window__content">
+        <button type = "button" class = "window__close">
+            Закрыть        </button>
+        <iframe width = "100%" height = "100%" src = "https://www.youtube.com/embed/GoUlzCTm83I"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+        </iframe>
+    </div>
+</div>
+
+    <div class="playnow__wrapper" id="screen__playnow">
+    <div class="playnow__container container">
+        <div class="row">
+            <header class="wow slideInDown col-12 mb-5">
+                <h2 class="container-headline" style="text-shadow: black 0 0 3px;">Коротко о главном</h2></header>
+            <div class="col-12">
+                <div class="row">
+                    <div class="wow fadeInUp col-xl-4 col-md-6 col-12 mt-5 d-flex justify-content-center" data-wow-delay="0.3s">
+                        <section class="playnow__card playnow__card--first card__atom">
+                            <header class="d-flex flex-row align-items-center">
+                                <p class="ml-2 text-white-bold pb-0 mb-0">Кого мы ищем?</p></header>
+                            <div class="playnow__card--content">
+                                <p class="text-white-bold mt-2">1. Игроков пониающих базовую структуру игры.<br/>2. Корпорации любго направления чистой численностью более 20 игроков.</p>
+                            </div>
+                            <footer style="margin-top: 30px;">
+                                <a href="{% url 'alliance' %}"target="_blank" rel="nofollow" role="button" class="g-btn g-btn-stroke" ><p class="m-0 ml-1">Состав корпораций альянса</p></a>
+                            </footer>
+                        </section>
+                    </div>
+                    <div class="wow fadeInUp col-xl-4 col-md-6 col-12 mt-5 d-flex justify-content-center" data-wow-delay="0.3s">
+                        <section class="playnow__card playnow__card--second card__atom">
+                            <header class="d-flex flex-row align-items-center">
+                                <p class="ml-2 text-white-bold pb-0 mb-0">Направление</p>
+                            </header>
+                            <div class="playnow__card--content">
+                                <h2 class="text-white-bold mt-2">У нас разнонаправленное сообщество <br/> Это значит что присоединиться может игрок/корпорация промышляющий(ая) чем угодно
+                                    (PvP, PvE, добыча, торговля, и.т.д.)</h2>
+                            </div>
+                            <footer style="margin-top: 30px;">
+                                <a href="https://zkillboard.com/corporation/98660988/" target="_blank" role="button" class="g-btn g-btn-stroke">
+                                    <img style="width: 22px;" src="/media/verstka/zkb.png" alt="zkb png"/>
+                                    <p class="m-0 ml-1">Zkillboard</p></a>
+                            </footer>
+                            <div class="playnow__card--smallbox"></div>
+                        </section>
+                    </div>
+                    <div class="wow fadeInDown col-xl-4 col-md-6 col-12 mt-5 d-flex justify-content-center"
+                         data-wow-delay="0.6s">
+                        <section class="playnow__card playnow__card--thirty card__atom">
+                            <header class="d-flex flex-row align-items-center">
+                                <p class="ml-2 text-white-bold pb-0 mb-0">Расположение</p>
+                            </header>
+                            <div class="playnow__card--content">
+                                <h2 class="text-white-bold mt-2">
+                                    Позиция сообщества исключительно nullsec <br/> (Исключение, корпорации специализирующиеся на проживании в WH и Пираты, чье местоположение неопределено)</h2>
+                            </div>
+                            <footer style="margin-top: 30px;">
+                                <a href="https://zkillboard.com/corporation/98660988/" target="_blank" role="button" class="g-btn g-btn-stroke">
+                                    <img style="width: 22px;" src="/media/verstka/zkb.png" alt="zkb png"/>
+                                    <p class="m-0 ml-1">Zkillboard</p></a>
+                            </footer>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="joinUs__wrapper" id = "screen__joinUs">
+    <div class="joinUs__container container">
+                <h2 class="container-headline mt-4">Присоединяйтесь к нам</h2>
+            <div class="col-12 joinUs__content d-flex flex-row flex-wrap justify-content-center align-items-center">
+                <section class="wow fadeInLeft joinUs__card mr-0 mr-md-2 mt-5">
+                        <p class = "joinUs__card--title mb-0">Группа</p>
+                        <h2 class = "joinUs__card--headline">Группа vk + мемы</h2>
+                    <footer class="joinUs__card--footer">
+                        <a href="https://vk.com/eve_trioni" rel="nofollow" target="_blank" role = "button" class = "g-btn g-btn-default g-btn-card-first btn-border-8">Подписаться<img style="width: 22px; height: 22px;" src = "/media/verstka/vk.png" alt = "FoT" /></a>
+                    </footer>
+                </section>
+                <section class="wow fadeInUp joinUs__card joinUs__card--second mr-0 mr-md-2 mt-5">
+                    <p class = "joinUs__card--title mb-0">YouTube</p>
+                    <div class="joinUs__card--content">
+                        <h2 class = "joinUs__card--headline">Play-Лист альянса</h2>
+                    </div>
+                    <footer class="joinUs__card--footer">
+                        <a href="https://www.youtube.com/watch?v=7z5mF365MWg&list=PLz99WXjCZByl3WrE9L_hPEjXf1z6r-917" target="_blank"  rel="nofollow" role = "button" class = "g-btn g-btn-default g-btn-card-second btn-border-8">Смотреть<img style="width: 22px; height: 22px;" src = "/media/verstka/youtube.png" alt = "FoT" /></a>
+                    </footer>
+                </section>
+                <section class="wow fadeInRight joinUs__card joinUs__card--thirty mr-0 mr-md-2 mt-5">
+                                <p class = "joinUs__card--title mb-0">Discord</p>
+                    <div class="joinUs__card--content">
+                        <h2 class = "joinUs__card--headline">Сервер</h2>
+                    </div>
+                    <footer class="joinUs__card--footer">
+                        <a href="https://discord.gg/ddxCm38CBS" rel="nofollow" target="_blank" role = "button" class = "g-btn g-btn-default g-btn-card-thirty btn-border-8">Войти<img style="width: 22px; height: 22px;" src = "/media/verstka/discord.png" alt = "FoT" /></a>
+                    </footer>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+<div class="footer__agreements d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="footer_row">
+            <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-lg-start">
+                <a href="/doc/oferta.pdf" class = "footer__agreement">
+                    Пользовательское соглашение                </a>
+            </div>
+            <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-lg-start">
+                <a href="/doc/privacy.pdf" class = "footer__agreement">
+                    Политика защиты персональной информации                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id = "scrollTop-app">
+    <transition name = "scrollFade">
+        <div class="scrollTop__wrapper"
+             v-if = "is_visible"
+             @click.prevent = "toTop()">
+            <div class="scrollTop__main">
+                <div class="scrollTop__arrow"></div>
+                <p>Наверх</p>
+            </div>
+        </div>
+    </transition>
+</div>
+</div>
+</body>
+</html>
+

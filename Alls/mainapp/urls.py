@@ -11,10 +11,7 @@ urlpatterns = [
     path('rent/', views.rent, name='rent'),
     path('inst/', views.inst, name='inst'),
     path('gid/', views.gid, name='gid'),
-    path('contact/', views.contact, name='contact'),
-    path('download/', views.download, name='download'),
-
-
+    path('downloads/', views.download, name='downloads'),
     path('login/', views.login, name='login'),
     path('info/', views.info, name='info'),
 ]

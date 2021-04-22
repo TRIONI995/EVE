@@ -40,17 +40,21 @@ def gid(request):
     return render(request, 'home.html')
 
 
-def contact(request):
-    return render(request, 'contacts.html')
-
-
 def download(request):
-    return render(request, 'home.html')
+    return render(request, 'downloads.html')
+
+
+def login(request):
+    return render(request, 'login.html')
+
+
 
 
 
 def login(request):
     return render(request, 'login.html')
+
+
 
 
 def info(request):
