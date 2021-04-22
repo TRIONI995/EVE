@@ -10,9 +10,11 @@ class allianceView(View):
         corp = Corporation.objects.all()
         return render(request, 'alliance.html', {"corp": corp})
 
+def index(request):
+    return render(request, 'download.html')
 
-def home(request):
-    return render(request, 'home.html')
+#def home(request):
+    #return render(request, 'home.html')
 
 
 class controlView(View):
@@ -45,3 +47,11 @@ def contact(request):
 def download(request):
     return render(request, 'home.html')
 
+
+
+def login(request):
+    return render(request, 'login.html')
+
+
+def info(request):
+    return render(request, 'info.html')
