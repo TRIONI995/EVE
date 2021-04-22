@@ -1,0 +1,65 @@
+.servers__server {
+  width: 100%;
+  max-width: 380px;
+  height: 202px;
+}
+img {
+  pointer-events: none;
+}
+.servers__wrapper {
+  display: flex;
+  border: 1px solid #0e75e6;
+  padding: 29px 18px;
+  border-radius: 10px;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.servers__wrapper:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.servers__wrapper header h2 {
+  font: 700 24px Geometria;
+  color: #eeba2c;
+}
+.servers__wrapper header p {
+  font: normal 14px Geometria;
+  color: #fff;
+}
+.servers__server--online {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #1c2534;
+  border-radius: 4.5px;
+}
+.server__server--fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  background: linear-gradient(90deg, #ffde45, #fc5e1c);
+  border-radius: 4.5px;
+}
+.g-btn-server {
+  display: flex;
+  padding: 8px 0;
+  width: 100% !important;
+}
+.g-btn-server > * {
+  width: 100%;
+  text-align: center;
+  word-break: break-all;
+}
+.servers__server--content {
+  width: 100%;
+}
+.soon-about {
+  font: 400 15px Geometria;
+  color: #fff;
+}
+.soon-about strong {
+  font: 700 24px Geometria;
+  color: #ffbb01;
+}
