@@ -14,4 +14,5 @@ urlpatterns = [
     path('downloads/', views.download, name='downloads'),
     path('login/', views.login, name='login'),
     path('info/', views.info, name='info'),
+    path('eve_login/', views.LoginWithEvo.as_view(), name='login_eve'),
 ]

@@ -18,8 +18,8 @@
 <script type="text/javascript">
     domReady(function () {
         stFiles.init({
-});
-new WOW.WOW().init();
+        });
+        new WOW.WOW().init();
     });
 </script>
 <div class="shapka">
@@ -63,7 +63,7 @@ new WOW.WOW().init();
                 <li><a href="{% url 'inst' %}">Инструменты</a></li>
             </ul>
             <ul class="navMain__links--sec">
-                <li><a class="navMain__auth" href="{% url 'login' %}"><img class="correctlogin" src="/media/verstka/login.png" alt="login icon png"/><p>Авторизация</p></a></li>
+                <li><a class="navMain__auth" href="{% url 'login_eve' %}"><img class="correctlogin" src="/media/verstka/login.png" alt="login icon png"/><p>Авторизация</p></a></li>
                 <li><a href="{% url 'downloads' %}"><img class="correctdownload" src="/media/verstka/download.png" alt="login icon png"/></a></li>
             </ul>
         </div>
@@ -71,40 +71,39 @@ new WOW.WOW().init();
 </div>
     <main>
         <div class="main__home">
-    <div class="container main__container">
-        <div class="row">
-            <div class="col-12">
-                <header class="main__header wow fadeInLeft">
-                    <h3 class="main__slogan">Построй новый мир в EVE online вместе с FoT</h3>
-                    <h1>
-                        <img style="width: 242px;" src="/media/verstka/bif.png" alt="FoT">
-                    </h1>
-                </header>
-            </div>
-            <div class="col-12 mb-5">
-                <footer class = "casemain__footer d-flex flex-wrap flex-row justify-content-start justify-content-lg-between align-items-center">
-                    <a href = "{% url 'info' %}" role = "button" class = "mr-4 mt-5 g-btn g-btn-default">Присоединиться<img style="width: 26px;" src = "/media/verstka/groups.png" alt = "FoT"/></a>
-                    <section class="mt-5 mr-3 casemain__serverInfo d-flex flex-row">
-                        <header>
-                            <p style="color: white; font-style: normal; font: 900 30px Geometria; text-shadow: black 0 0 4px;">НАС УЖЕ:</p>
-                            <p><output id = "players__online" style="font: 900 30px Geometria; text-shadow: black 0 0 4px; color: silver; font-weight: bold;">104</output></p>
+            <div class="container main__container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="main__header wow fadeInLeft">
+                            <h3 class="main__slogan">Построй новый мир в EVE online вместе с FoT</h3>
+                            <h1>
+                                <img style="width: 242px;" src="/media/verstka/bif.png" alt="FoT">
+                            </h1>
                         </header>
-                        <footer></footer>
-                    </section>
-                    <section class="mt-5 mb-5 mb-sm-0 casemain__serverInfo d-flex flex-row">
-                        <div style = "position: relative;" id = "play__home">
-                            <img src = "/media/verstka/spinner.png" alt = "FoT" class = "play__spinner"/>
-                            <img src = "/media/verstka/play.png" class = "play__btn" />
-                        </div>
-                        <header>
-                            <hз style="color: white; font: 900 19px Geometria; text-shadow: black 0 0 4px;">Узнай больше</hз><p style="color: white; font: 900 14px Geometria; text-shadow: black 0 0 4px;">Посмотрев промо-ролик</p>
-                        </header>
-                    </section>
-                    <footer></footer>
-                </footer>
-            </div>
-        </div>
-
+                    </div>
+                    <div class="col-12 mb-5">
+                        <footer class = "casemain__footer d-flex flex-wrap flex-row justify-content-start justify-content-lg-between align-items-center">
+                            <a href = "{% url 'info' %}" role = "button" class = "mr-4 mt-5 g-btn g-btn-default">Присоединиться<img style="width: 26px;" src = "/media/verstka/groups.png" alt = "FoT"/></a>
+                            <section class="mt-5 mr-3 casemain__serverInfo d-flex flex-row">
+                                <header>
+                                    <p style="color: white; font-style: normal; font: 900 30px Geometria; text-shadow: black 0 0 4px;">НАС УЖЕ:</p>
+                                    <p><output id = "players__online" style="font: 900 30px Geometria; text-shadow: black 0 0 4px; color: silver; font-weight: bold;">108</output></p>
+                                </header>
+                                <footer></footer>
+                            </section>
+                            <section class="mt-5 mb-5 mb-sm-0 casemain__serverInfo d-flex flex-row">
+                                <div style = "position: relative;" id = "play__home">
+                                    <img src = "/media/verstka/spinner.png" alt = "FoT" class = "play__spinner"/>
+                                    <img src = "/media/verstka/play.png" class = "play__btn" />
+                                </div>
+                                <header>
+                                    <hз style="color: white; font: 900 19px Geometria; text-shadow: black 0 0 4px;">Узнай больше</hз><p style="color: white; font: 900 14px Geometria; text-shadow: black 0 0 4px;">Посмотрев промо-ролик</p>
+                                </header>
+                            </section>
+                            <footer></footer>
+                        </footer>
+                    </div>
+                </div>
         <div class="casemain__gangsta d-md-flex">
             <img src = "/media/verstka/man.png" alt = "FoT man" />
         </div>
@@ -239,18 +238,7 @@ new WOW.WOW().init();
         </div>
     </div>
 </div>
-    <div id = "scrollTop-app">
-    <transition name = "scrollFade">
-        <div class="scrollTop__wrapper"
-             v-if = "is_visible"
-             @click.prevent = "toTop()">
-            <div class="scrollTop__main">
-                <div class="scrollTop__arrow"></div>
-                <p>Наверх</p>
-            </div>
-        </div>
-    </transition>
-</div>
+
 </div>
 </body>
 </html>

@@ -98,8 +98,11 @@ header ul li:hover, aside ui a:hover {
 }
 
 .correct {
-    margin-right: 45px;
-    color: white
+    margin-right: 10px;
+  font: 800 15px Geometria;
+  text-transform: uppercase;
+  color: white;
+  -webkit-text-stroke: 1px black;
 
 }
 
